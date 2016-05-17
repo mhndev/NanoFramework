@@ -1,10 +1,9 @@
 <?php
 
-namespace hndev\NanoFramework\Http;
+namespace mhndev\NanoFramework\Http;
 
 use mhndev\NanoFramework\Http\Interfaces\iRequest;
 use mhndev\NanoFramework\Http\Interfaces\iResponse;
-use mhndev\NanoFramework\Http\Request;
 
 class Http
 {
