@@ -1,5 +1,5 @@
 {
-    "name": "mhndev/NanoFramework",
+    "name": "mhndev/nano-framework",
     "description": "php message client for sending and receiving messages using rest or soap",
     "license": "MIT",
     "authors": [
