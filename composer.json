@@ -1,0 +1,23 @@
+{
+    "name": "mhndev/NanoFramework",
+    "description": "php message client for sending and receiving messages using rest or soap",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Majid Abdolhosseini",
+            "email": "majid8911303@gmail.com"
+        }
+    ],
+
+    "require": {
+        "php": ">=5.4.0"
+    },
+
+
+    "autoload": {
+        "psr-4": {
+            "mhndev\\NanoFramework\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
