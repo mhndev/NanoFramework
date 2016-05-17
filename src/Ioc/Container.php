@@ -2,6 +2,8 @@
 
 namespace mhndev\NanoFramework\Ioc;
 
+use mhndev\NanoFramework\Ioc\Interfaces\iContainer;
+
 class Container implements iContainer
 {
     
