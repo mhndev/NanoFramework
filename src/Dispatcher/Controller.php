@@ -5,7 +5,7 @@ namespace mhndev\NanoFramework\Dispatcher;
 
 use mhndev\NanoFramework\Http\Interfaces\iRequest;
 use mhndev\NanoFramework\Http\Interfaces\iResponse;
-use mhndev\NanoFramework\Ioc\iContainer;
+use mhndev\NanoFramework\Ioc\Interfaces\iContainer;
 use mhndev\NanoFramework\Router\Interfaces\iRoute;
 
 class Controller
