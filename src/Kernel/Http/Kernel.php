@@ -11,7 +11,7 @@ namespace mhndev\NanoFramework\Kernel\Http;
 use mhndev\NanoFramework\Dispatcher\Interfaces\iDispatcher;
 use mhndev\NanoFramework\Http\Interfaces\iRequest;
 use mhndev\NanoFramework\Http\Interfaces\iResponse;
-use mhndev\NanoFramework\Ioc\iContainer;
+use mhndev\NanoFramework\Ioc\Interfaces\iContainer;
 use mhndev\NanoFramework\Router\Interfaces\iRouter;
 use mhndev\NanoFramework\Router\Route;
 
