@@ -1,6 +1,6 @@
 <?php
 
-namespace mhndev\NanoFramework\Ioc;
+namespace mhndev\NanoFramework\Ioc\Interfaces;
 
 interface iContainer
 {
