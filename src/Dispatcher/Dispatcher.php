@@ -10,7 +10,7 @@ namespace mhndev\NanoFramework\Dispatcher;
 
 use mhndev\NanoFramework\Dispatcher\Interfaces\iDispatcher;
 use mhndev\NanoFramework\Http\Interfaces\iResponse;
-use mhndev\NanoFramework\Ioc\iContainer;
+use mhndev\NanoFramework\Ioc\Interfaces\iContainer;
 use mhndev\NanoFramework\Router\Interfaces\iRoute;
 
 class Dispatcher implements iDispatcher
