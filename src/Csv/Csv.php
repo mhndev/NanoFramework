@@ -1,6 +1,6 @@
 <?php
 
-namespace mhndev\NanoFramework;
+namespace mhndev\NanoFramework\Csv;
 
 class Csv
 {
