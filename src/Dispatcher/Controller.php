@@ -1,7 +1,15 @@
 <?php
 
-namespace mhndev\NanoFramework\Dispatcher;
+/*
+ * This file is part of mhndev/nano-framework.
+ *
+ * (c) Majid Abdolhosseini <majid8911303@gmail.com>
+ *
+ * For the full copyright and license information, please view the "LICENSE.md"
+ * file that was distributed with this source code.
+ */
 
+namespace mhndev\NanoFramework\Dispatcher;
 
 use mhndev\NanoFramework\Http\Interfaces\iRequest;
 use mhndev\NanoFramework\Http\Interfaces\iResponse;
@@ -27,6 +35,10 @@ class Controller
     protected $response;
 
 
+    /**
+     * Controller constructor.
+     * @param iContainer $container
+     */
     public function __construct(iContainer $container)
     {
         $this->container = $container;
@@ -66,6 +78,9 @@ class Controller
 
     }
 
+    /**
+     * @return mixed
+     */
     public function url()
     {
         $server = $this->request->getServerParams();
@@ -81,6 +96,9 @@ class Controller
     }
 
 
+    /**
+     * @return string
+     */
     public function baseUrl()
     {
         $server = $this->request->getServerParams();

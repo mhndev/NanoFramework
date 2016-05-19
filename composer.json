@@ -1,11 +1,15 @@
 {
     "name": "mhndev/nano-framework",
     "description": "simple and small php framework to do small projects and also for answering to learning of what is a php framework?",
-    "license": "MIT",
+    "keywords": ["php framework", "mini framework", "micro framework","nano framework","mvc framework"],
+    "type": "library",
+    "homepage": "http://github.com/mhndev/nano-framework",
+    "license": "BSD Style",
     "authors": [
         {
             "name": "Majid Abdolhosseini",
-            "email": "majid8911303@gmail.com"
+            "email": "majid8911303@gmail.com",
+            "homepage": "http://mhndev.com"
         }
     ],
 
@@ -19,5 +23,12 @@
             "mhndev\\NanoFramework\\": "src/"
         }
     },
+
+    "autoload-dev": {
+        "psr-4": {
+            "mhndev\\NanoFramework\\":"tests/"
+        }
+    },
+
     "minimum-stability": "dev"
 }
