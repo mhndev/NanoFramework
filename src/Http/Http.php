@@ -1,5 +1,12 @@
 <?php
-
+/*
+ * This file is part of mhndev/nano-framework.
+ *
+ * (c) Majid Abdolhosseini <majid8911303@gmail.com>
+ *
+ * For the full copyright and license information, please view the "LICENSE.md"
+ * file that was distributed with this source code.
+ */
 namespace mhndev\NanoFramework\Http;
 
 use mhndev\NanoFramework\Http\Interfaces\iRequest;
@@ -25,18 +32,20 @@ class Http
     function createRequestFromGlobals()
     {
         $serverParams = $_SERVER;
-        $uri          = $_SERVER['REQUEST_URI'];
+        
+        $uri          = strtok($_SERVER["REQUEST_URI"],'?');
         $method       = $_SERVER['REQUEST_METHOD'];
         $headers      = $this->parseRequestHeaders($serverParams);
         $cookies      = $_COOKIE;
         $body         = $entityBody = file_get_contents('php://input');
         $files        = $_FILES;
+        $queryParams  = $_GET;
 
         //$body         = http_get_request_body();
         //$body         = stream_get_contents(STDIN);
 
 
-        $this->request = new Request($method, $uri, $headers, $cookies, $serverParams, $body, $files);
+        $this->request = new Request($method, $uri,$queryParams, $headers, $cookies, $serverParams, $body, $files);
 
         return $this->request;
     }

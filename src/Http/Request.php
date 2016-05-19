@@ -1,5 +1,12 @@
 <?php
-
+/*
+ * This file is part of mhndev/nano-framework.
+ *
+ * (c) Majid Abdolhosseini <majid8911303@gmail.com>
+ *
+ * For the full copyright and license information, please view the "LICENSE.md"
+ * file that was distributed with this source code.
+ */
 namespace mhndev\NanoFramework\Http;
 
 use mhndev\NanoFramework\Http\Interfaces\iRequest;
@@ -90,6 +97,7 @@ class Request extends AbstractMessage implements iRequest
     public function __construct(
         $method,
         $uri,
+        array $queryParams,
         array $headers,
         array $cookies,
         array $serverParams,
@@ -104,6 +112,7 @@ class Request extends AbstractMessage implements iRequest
         $this->serverParams = $serverParams;
         $this->body         = $body;
         $this->files        = $files;
+        $this->queryParams  = $queryParams;
     }
 
 
