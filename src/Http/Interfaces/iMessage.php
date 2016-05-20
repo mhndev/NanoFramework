@@ -11,6 +11,14 @@
 
 namespace mhndev\NanoFramework\Http\Interfaces;
 
+/**
+ * Interface iMessage
+ * @package mhndev\NanoFramework\Http\Interfaces
+ *
+ * An HTTP message is either a request from a client to a server or a response from a server to a client.
+ * This specification defines interfaces for the HTTP messages
+ *
+ */
 interface iMessage
 {
 

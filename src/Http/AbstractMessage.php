@@ -12,6 +12,7 @@ namespace mhndev\NanoFramework\Http;
 
 use mhndev\NanoFramework\Http\Interfaces\iMessage;
 use mhndev\NanoFramework\Http\Exceptions\InvalidHttpVersion;
+use mhndev\NanoFramework\Http\Interfaces\iStream;
 
 abstract class AbstractMessage implements iMessage
 {
@@ -33,7 +34,7 @@ abstract class AbstractMessage implements iMessage
 
 
     /**
-     * Body
+     * @var string
      */
     protected $body;
 
@@ -113,7 +114,7 @@ abstract class AbstractMessage implements iMessage
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getBody()
     {
@@ -121,10 +122,10 @@ abstract class AbstractMessage implements iMessage
     }
 
     /**
-     * @param $body
+     * @param string $body
      * @return AbstractMessage
      */
-    public function withBody($body)
+    public function withBody(iStream $body)
     {
         $clone = clone $this;
 

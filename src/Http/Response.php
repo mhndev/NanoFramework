@@ -26,6 +26,13 @@ class Response extends AbstractMessage implements iResponse
 
 
     /**
+     * a human-readable description of the status code
+     *
+     * @var string
+     */
+    protected $phrase = 'OK';
+
+    /**
      * Status codes and reason phrases
      */
     protected static $messages = [
@@ -120,4 +127,27 @@ class Response extends AbstractMessage implements iResponse
 
         return $clone;
     }
+
+    /**
+     * @return string
+     */
+    public function getPhrase()
+    {
+        return $this->phrase;
+    }
+
+    /**
+     * @param string $phrase
+     * @return Response
+     */
+    public function withPhrase($phrase)
+    {
+        $clone = clone $this;
+
+        $clone->phrase = $phrase;
+
+        return $clone;
+    }
+
+    
 }
