@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace mhndev\NanoFramework\Router\Exception;
+namespace mhndev\NanoFramework\Router\Exceptions;
 
 class RouteNotFound extends \Exception
 {

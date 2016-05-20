@@ -72,10 +72,10 @@ class Kernel
     public function run($request)
     {
         $route    = $this->router->match($request->getUri());
-        
+
         $response = $this->dispatcher->dispatch($route);
 
-        return $this->respond($response);
+        $this->respond($response);
     }
 
 
@@ -83,7 +83,6 @@ class Kernel
      * Send the response the client
      *
      * @param iResponse $response
-     * @return iResponse
      */
     public function respond(iResponse $response)
     {
@@ -93,17 +92,18 @@ class Kernel
             header(sprintf(
                 'HTTP/%s %s %s',
                 $response->getProtocolVersion(),
-                $response->getStatusCode()
+                $response->getStatusCode(),
+                $response->getPhrase()
             ));
+
+
             // Headers
-            foreach ($response->getHeaders() as $name => $values) {
-                foreach ($values as $value) {
-                    header(sprintf('%s: %s', $name, $value), false);
-                }
+            foreach ($response->getHeaders() as $name => $value) {
+                header(sprintf('%s: %s', $name, $value), false);
             }
         }
 
-        return $response;
+        echo $response->getBody();
     }
 
 

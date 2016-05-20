@@ -11,7 +11,7 @@
 
 namespace mhndev\NanoFramework\Router;
 
-use mhndev\NanoFramework\Router\Exception\RouteNotFound;
+use mhndev\NanoFramework\Router\Exceptions\RouteNotFound;
 use mhndev\NanoFramework\Router\Interfaces\iRoute;
 use mhndev\NanoFramework\Router\Interfaces\iRouter;
 
