@@ -249,7 +249,15 @@ class Request extends AbstractMessage implements iRequest
         $this->bodyParsed = true;
 
 
-        $parsedBody = '';
+        $params = explode('&',$this->body);
+
+        $parsedBody = [];
+
+        foreach ($params as $param){
+
+            $values = explode('=',$param);
+            $parsedBody[$values[0]] = $values[1];
+        }
 
         $this->parsedBody = $parsedBody;
 
