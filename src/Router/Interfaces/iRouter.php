@@ -16,9 +16,10 @@ interface iRouter
 
     /**
      * @param string $pattern
+     * @param string $method
      * @return iRoute
      */
-    function match($pattern);
+    function match($pattern, $method);
 
 
     /**

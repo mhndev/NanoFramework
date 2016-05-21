@@ -22,4 +22,9 @@ interface iResponse extends iMessage
      * @return mixed
      */
     public function withStatusCode($code);
+
+    /**
+     * @return string
+     */
+    public function getPhrase();
 }

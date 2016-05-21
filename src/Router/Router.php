@@ -26,14 +26,15 @@ class Router implements iRouter
 
     /**
      * @param string $pattern
+     * @param string $method
      * @return iRoute
      * @throws RouteNotFound
      */
-    function match($pattern)
+    function match($pattern, $method)
     {
         /** @var iRoute $route */
         foreach ($this->routes as $route){
-            if($route->getPattern() == $pattern)
+            if($route->getPattern() == $pattern && $route->getMethod() == $method)
                 return $route;
         }
 
@@ -82,5 +83,5 @@ class Router implements iRouter
     {
         return $this->routes;
     }
-    
+
 }
