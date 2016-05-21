@@ -22,6 +22,12 @@ class Route implements iRoute
      */
     protected $name;
 
+
+    /**
+     * @var array
+     */
+    protected $uriParams;
+
     /**
      * @var string
      */
@@ -116,5 +122,24 @@ class Route implements iRoute
     function getCallable()
     {
         return $this->callable;
+    }
+
+    /**
+     * @return array
+     */
+    function getUriParams()
+    {
+        return $this->uriParams;
+    }
+
+    /**
+     * @param array $params
+     * @return $this
+     */
+    function setUriParams(array $params)
+    {
+        $this->uriParams = $params;
+
+        return $this;
     }
 }

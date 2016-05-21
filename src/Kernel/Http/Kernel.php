@@ -71,7 +71,7 @@ class Kernel
      */
     public function run($request)
     {
-        $route    = $this->router->match($request->getUri(), $request->getMethod());
+        $route = $this->router->match($request->getUri(), $request->getMethod());
 
         $response = $this->dispatcher->dispatch($route);
 

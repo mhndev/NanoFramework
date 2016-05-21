@@ -44,7 +44,12 @@ class Dispatcher implements iDispatcher
             $items = explode('@',$callable );
 
             $controller = new $items[0]($this->container);
-            $result = $controller->{$items[1]}();
+
+            if(!empty($route->getUriParams())){
+                $ActionArguments = implode(',',$route->getUriParams());
+                $result = $controller->{$items[1]}($ActionArguments);
+            }else
+                $result = $controller->{$items[1]}();
 
             return $result;
         }

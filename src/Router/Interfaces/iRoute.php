@@ -51,4 +51,15 @@ interface iRoute
      * @return $this
      */
     function setPattern($pattern);
+
+    /**
+     * @return array
+     */
+    function getUriParams();
+
+    /**
+     * @param array $params
+     * @return mixed
+     */
+    function setUriParams(array $params);
 }
