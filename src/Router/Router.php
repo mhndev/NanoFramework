@@ -34,7 +34,7 @@ class Router implements iRouter
     {
         /** @var iRoute $route */
         foreach ($this->routes as $route){
-            if($route->getMethod() == $method && $params = $this->matchUriWithRoute($uri, $route)){
+            if($route->getMethod() == $method && is_array($params = $this->matchUriWithRoute($uri, $route))){
                 return $route->setUriParams($params);
             }
         }
@@ -53,6 +53,7 @@ class Router implements iRouter
             $fixedPart = $this->getUriWithoutParameters($route->getPattern()),
             $uri
         );
+
 
         if(!$condition)
             return false;
